@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="THE CLASS CREW — 1BACSH-I. Lessons, study resources, videos, exercises and exam practice for students.">
+<title>THE CLASS CREW | 1BACSH-I</title>
+<style>
+:root{--navy:#061321;--navy2:#0b2034;--gold:#ffcf67;--gold2:#e9a927;--white:#f8fafc;--muted:#b9c5d2;--line:#314256;--card:#0c1b2b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input{font:inherit}
+header{position:sticky;top:0;z-index:10;background:rgba(4,15,27,.95);backdrop-filter:blur(14px);border-bottom:1px solid #b58b36}
+.nav{max-width:1200px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:clamp(16px,2.2vw,24px);letter-spacing:-.5px}.logo{font-size:31px;color:var(--gold)}.brand small{display:block;color:var(--gold);font-size:11px;letter-spacing:4px;text-align:center}.links{display:flex;align-items:center;gap:20px;font-size:14px}.links a:hover{color:var(--gold)}.menu{display:none;background:transparent;color:white;border:1px solid var(--line);padding:8px 12px;border-radius:9px}
+.wrap{max-width:1200px;margin:auto;padding:0 22px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding-top:52px;padding-bottom:35px}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-size:11px;font-weight:800}.hero h1{font-size:clamp(42px,6vw,76px);line-height:.99;letter-spacing:-3px;margin:14px 0}.gold{color:var(--gold)}.subtitle{font-size:clamp(20px,2.5vw,27px);letter-spacing:1px;margin:12px 0}.hero p{color:#d1d9e2;max-width:580px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;font-weight:800;border:1px solid var(--gold);cursor:pointer}.btn.primary{background:var(--gold);color:#091525}.btn.secondary{background:transparent;color:var(--white)}.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}.hero-image{width:100%;height:330px;object-fit:cover;object-position:center;border-radius:20px;border:1px solid #6f5729;box-shadow:0 18px 55px #0008}
+.section{padding:25px 0 30px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:17px}.section h2{font-size:clamp(24px,3vw,32px);margin:0;letter-spacing:-.8px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.subject{border:1px solid var(--line);background:linear-gradient(145deg,#11273b,#081523);border-radius:16px;padding:20px;min-height:175px;transition:.2s}.subject:hover{border-color:var(--gold);transform:translateY(-3px)}.icon{font-size:27px}.subject h3{margin:8px 0 4px;font-size:19px}.subject p{margin:0;color:var(--muted);font-size:13px}.pill{display:inline-block;margin-top:13px;color:var(--gold);font-size:12px;font-weight:800}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}.stat{border:1px solid #8f6e31;border-radius:13px;padding:14px;background:#0b1b2a}.stat b{display:block;color:var(--gold);font-size:17px}.stat span{color:var(--muted);font-size:12px}
+.resources{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{border:1px solid var(--line);border-radius:16px;background:#091827;padding:20px}.panel h3{margin:0 0 12px}.resource{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #223246}.resource:last-child{border:0}.resource .fileicon{font-size:23px}.resource strong{display:block;font-size:14px}.resource small{display:block;color:var(--muted);font-size:12px}.resource a{margin-left:auto;color:var(--gold);font-size:12px;font-weight:800;white-space:nowrap}.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tip{padding:17px;border-radius:14px;background:#0c1e2e;border:1px solid var(--line)}.tip b{display:block;margin-bottom:5px}.tip p{color:var(--muted);font-size:13px;margin:0}
+.quote{margin:18px 0 38px;text-align:center;border:1px solid #98732f;border-radius:16px;padding:25px;background:linear-gradient(110deg,#142537,#091523);font-size:clamp(20px,3vw,28px);font-weight:800}.quote span{color:var(--gold)}
+footer{border-top:1px solid #8e6a2c;padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot b{color:var(--white)}
+.searchbox{display:flex;gap:8px;margin-top:12px}.searchbox input{min-width:0;flex:1;background:#071320;border:1px solid var(--line);border-radius:9px;padding:10px;color:white}.notice{font-size:12px;color:var(--muted);margin-top:10px}
+@media(max-width:850px){.links{display:none;position:absolute;top:64px;left:0;right:0;background:#071321;padding:18px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding-top:35px}.hero-image{height:260px}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.wrap{padding:0 15px}.nav{padding:12px 15px}.hero h1{letter-spacing:-2px}.grid,.resources,.tips{grid-template-columns:1fr}.hero-image{height:215px}.section{padding-top:18px}.quote{padding:20px 12px}.stat{padding:12px}}
+</style>
+</head>
+<body>
+<header><nav class="nav">
+<a class="brand" href="#home"><span class="logo">🎓</span><span>THE CLASS CREW<small>1BACSH-I</small></span></a>
+<button class="menu" id="menuBtn" aria-label="Open navigation">☰ Menu</button>
+<div class="links" id="navLinks"><a href="#home">Home</a><a href="#subjects">Subjects</a><a href="#library">PDF Library</a><a href="#videos">Video Lessons</a><a href="#exams">Exams & Tests</a><a href="#tips">Study Tips</a></div>
+</nav></header>
+<main id="home" class="wrap">
+<section class="hero">
+<div><div class="eyebrow">Learn · Practice · Progress · Together</div>
+<h1>THE <span class="gold">CLASS</span><br>CREW</h1>
+<div class="subtitle"><span class="gold">1 B A C S H - I</span></div>
+<h2 style="font-size:24px;margin:0">Your Complete Study Platform</h2>
+<p>Lessons, summaries, exercises, videos and exam practice in one place — built to help 1BACSH-I students learn with confidence.</p>
+<div class="actions"><a class="btn primary" href="#subjects">Start Learning　↗</a><a class="btn secondary" href="#library">📚 Explore Resources</a></div>
+<p class="notice">A student-friendly study hub. Resources and links can be added as you progress through the year.</p>
+</div>
+<img class="hero-image" src="assets/class-crew-dashboard-concept.png" alt="Study desk and learning resources for The Class Crew">
+</section>
+<section class="stats" aria-label="Platform highlights"><div class="stat"><b>📚 All Subjects</b><span>Organized by topic</span></div><div class="stat"><b>▶ Video Support</b><span>Learn visually</span></div><div class="stat"><b>📝 Practice</b><span>Build exam confidence</span></div><div class="stat"><b>🤝 Learn Together</b><span>Made for students</span></div></section>
+<section class="section" id="subjects"><div class="section-head"><div><h2>Explore Your Subjects</h2><p>Choose a subject to find lessons, notes and practice materials.</p></div></div>
+<div class="grid">
+<a class="subject" href="#english"><div class="icon">🇬🇧</div><h3>English</h3><p>Lessons · Vocabulary · Grammar · Writing</p><span class="pill">EXPLORE ENGLISH →</span></a>
+<a class="subject" href="#francais"><div class="icon">🇫🇷</div><h3>Français</h3><p>Leçons · Résumés · Méthodes · Exercices</p><span class="pill">EXPLORER →</span></a>
+<a class="subject" href="#history"><div class="icon">🌍</div><h3>History & Geography</h3><p>Lessons · Maps · Summaries · Tests</p><span class="pill">EXPLORE →</span></a>
+<a class="subject" href="#maths"><div class="icon">➗</div><h3>Mathematics</h3><p>Examples · Exercises · Solutions</p><span class="pill">PRACTISE →</span></a>
+<a class="subject" href="#philosophy"><div class="icon">🧠</div><h3>Philosophy</h3><p>Concepts · Text analysis · Essay methods</p><span class="pill">EXPLORE →</span></a>
+<a class="subject" href="#svt"><div class="icon">🧬</div><h3>SVT</h3><p>Lessons · Diagrams · Exercises · Tests</p><span class="pill">EXPLORE →</span></a>
+</div></section>
+<section class="section" id="library"><div class="section-head"><div><h2>PDF Library & Study Resources</h2><p>Quick access to trusted learning materials.</p></div></div>
+<div class="resources"><div class="panel" id="english"><h3>🇬🇧 English — Unit 1</h3>
+<div class="resource"><span class="fileicon">📘</span><div><strong>Our Cultural Heritage — Vocabulary</strong><small>PDF lesson resource · My Teacher</small></div><a href="https://myteacher.ma/wp-content/uploads/2024/02/1-bac-our-cultural-heritage-vocabulary.pdf" target="_blank" rel="noopener">OPEN PDF ↗</a></div>
+<div class="resource"><span class="fileicon">📗</span><div><strong>Simple Past — Grammar</strong><small>PDF lesson resource · My Teacher</small></div><a href="https://myteacher.ma/wp-content/uploads/2024/02/1-bac-our-cultural-heritage-grammar-simple-past.pdf" target="_blank" rel="noopener">OPEN PDF ↗</a></div>
+<div class="resource"><span class="fileicon">💬</span><div><strong>Expressing Opinions & Beliefs</strong><small>Functions PDF · My Teacher</small></div><a href="https://myteacher.ma/wp-content/uploads/2024/02/1-bac-our-cultural-heritage-functions-opinions-and-beliefs.pdf" target="_blank" rel="noopener">OPEN PDF ↗</a></div>
+<div class="resource"><span class="fileicon">🔎</span><div><strong>More Unit 1 lesson plans</strong><small>Reading, listening and writing resources</small></div><a href="https://myteacher.ma/1-year-baccalaureate-gateway-to-english-lesson-plans-unit-1-our-cultural-heritage/" target="_blank" rel="noopener">VIEW ↗</a></div>
+</div>
+<div class="panel" id="videos"><h3>🎬 Video Lessons</h3>
+<div class="resource"><span class="fileicon">▶️</span><div><strong>Simple Past — Video Explanation</strong><small>Video lesson · My English</small></div><a href="https://youtu.be/BrkNdCeSvbY" target="_blank" rel="noopener">WATCH ↗</a></div>
+<div class="resource"><span class="fileicon">📚</span><div><strong>Gateway to English — Unit 1 resources</strong><small>More lessons and study materials</small></div><a href="https://myenglish.ezzahra-marrakech.com/portfolio1BAC.html" target="_blank" rel="noopener">EXPLORE ↗</a></div>
+<div class="resource"><span class="fileicon">🧑‍🏫</span><div><strong>Unit 1 — Our Cultural Heritage</strong><small>Vocabulary, grammar, functions and more</small></div><a href="https://myteachernabil.com/gateway-1-unit-1-our-cultural-heritage/" target="_blank" rel="noopener">LEARN ↗</a></div>
+<p class="notice">External resources belong to their respective creators. Check that each resource matches your teacher's programme.</p>
+</div></div></section>
+<section class="section" id="exams"><div class="section-head"><div><h2>Exams & Tests</h2><p>Use these resources to practise. Add your class tests and corrections when available.</p></div></div>
+<div class="grid">
+<a class="subject" href="https://telmidtice.com/1bac-sm-s1-c-unit-1-our-cultural-heritage/" target="_blank" rel="noopener"><div class="icon">📝</div><h3>Practice Resources</h3><p>Unit 1 materials and exercises from TelmidTICE. Verify stream alignment.</p><span class="pill">OPEN RESOURCE ↗</span></a>
+<a class="subject" href="https://myteacher.ma/textbook-directory/" target="_blank" rel="noopener"><div class="icon">📖</div><h3>Textbook Directory</h3><p>Find Gateway to English books and related resources.</p><span class="pill">BROWSE ↗</span></a>
+<div class="subject"><div class="icon">✅</div><h3>Corrections & Answer Keys</h3><p>Add verified corrections here when you have them. Never assume an answer key is official.</p><span class="pill">COMING AS YOU ADD RESOURCES</span></div>
+</div></section>
+<section class="section" id="tips"><div class="section-head"><div><h2>Study Smarter</h2><p>Small habits make a real difference.</p></div></div><div class="tips">
+<div class="tip"><b>🗓️ Plan your week</b><p>Choose one clear goal for each study session and leave time to review.</p></div>
+<div class="tip"><b>✍️ Practise actively</b><p>Close your notes and try exercises before checking the answers.</p></div>
+<div class="tip"><b>🔁 Review regularly</b><p>Revisit difficult ideas after a day, then again later in the week.</p></div>
+</div></section>
+<div class="quote">“Small steps every day <span>lead to big results.</span>”<br><span style="font-size:14px;letter-spacing:2px">TOGETHER WE LEARN. TOGETHER WE GROW.</span></div>
+</main>
+<footer><div class="wrap foot"><div><b>🎓 THE CLASS CREW · 1BACSH-I</b><br>Learn together. Grow together. Succeed together.</div><div>Educational student project · External resources credited to their sources</div><div><a href="#home">Back to top ↑</a></div></div></footer>
+<script>
+const btn=document.getElementById('menuBtn'),links=document.getElementById('navLinks');
+btn.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body></html>
